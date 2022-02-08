@@ -17,4 +17,4 @@ datafeaturesNames<- read.table(file.path("~/Rproject problem/getting and cleanin
 names(datafeatures)<- datafeaturesNames$V2
 
 tempData  <- cbind(dataActivity,datasubject)
-#allData <- cbind(da)
+allData <- cbind(datafeatures,tempData)
