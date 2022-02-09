@@ -17,4 +17,8 @@ datafeaturesNames<- read.table(file.path("~/Rproject problem/getting and cleanin
 names(datafeatures)<- datafeaturesNames$V2
 
 tempData  <- cbind(dataActivity,datasubject)
-allData <- cbind(datafeatures,tempData)
+allData <- cbind(datafeatures,tempData) 
+
+meanAndStd<-  as.data.frame( select(allData,contains("mean()"),contains("std()"),matches("Activity"),matches("subject")))
+
+     
